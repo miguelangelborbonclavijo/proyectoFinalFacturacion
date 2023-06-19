@@ -1,3 +1,4 @@
+<?php include("db.php")?>
 <?php include("../includes/head.php") ?>
 <main style="margin-top:30px;">
 <div class="container-lg">
@@ -26,8 +27,8 @@ while($filas = mysqli_fetch_array($resulproductos)){?>
 <td><?php echo $filas['ProPreCo'] ?></td>
 <td><?php echo $filas['ProPreVe'] ?></td>
 <td>
-<a href="editar_productos.php?id=<?php echo $filas['ProId']?>">Editar</a>
-<a href="eliminar_productos.php?id=<?php echo $filas['ProId']?>">Eliminar</a>
+<a href="../registros/editar_productos.php?id=<?php echo $filas['ProId']?>">Editar</a>
+<a href="../registros/eliminar_productos.php?id=<?php echo $filas['ProId']?>">Eliminar</a>
 </td>
 </tr>
 <?php } ?> 

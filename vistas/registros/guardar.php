@@ -1,39 +1,5 @@
 <?php
     include("db.php");
-    if(isset($_POST['guardar_producto'])){
-        $TipPro = $_POST['TipPro'];
-        $DesPro = $_POST['DesPro'];
-        $PreCom = $_POST['PreCom'];
-        $PreVen = $_POST['PreVent'];
-        $query ="INSERT INTO productos ( ProTip, ProDes, ProPreCo, ProPreVe) VALUES 
-        ('$TipPro','$DesPro','$PreCom','$PreVen')";
-        mysqli_query($conn, $query);
-        header("Location:registro_productos.php");
-    }   
-?>
-<?php
-    include("db.php");
-    if(isset($_POST['guardar_tipProducto'])){
-        $TipNomP = $_POST['TipNomPro'];
-        $query ="INSERT INTO tipodeproducto (TipNom) VALUES ('$TipNomP')";
-        mysqli_query($conn, $query);
-        header("Location: tipo_producto.php");
-    }
-?>
-<?php
-    include("db.php");
-    if(isset($_POST['guardar_proveedores'])){
-        $NipProv = $_POST['NipPro'];
-        $NomProv = $_POST['NomPro'];
-        $Dirr = $_POST['Dirre'];
-        $query ="INSERT INTO proveedores (PrId, PrNomPr, PrDirr) VALUES 
-        ('$NipProv','$NomProv','$Dirr')";
-        mysqli_query($conn, $query);
-        header("Location: registro_proveedores.php");
-    }
-?>
-<?php
-    include("db.php");
     if(isset($_POST['guardar_soporte'])){
         $NumDoSop = $_POST['NumDocSop'];
         $TipClSop = $_POST['TipCliSop'];

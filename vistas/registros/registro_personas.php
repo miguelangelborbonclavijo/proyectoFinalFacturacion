@@ -1,4 +1,4 @@
-<?php include("../../includes/head.php")?>
+<?php include("../includes/head.php")?>
 <main class="bg-dark text-light p-5 text-center text-sm-start" >
 <form action="guardar.php" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
 <h1 style="text-align: center;">REGISTRO DE USUARIO</h1>

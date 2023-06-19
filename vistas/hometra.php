@@ -96,39 +96,6 @@ En este apartado podras registrar todas las vantas de los productos o servicios 
 <a href="http://" class="btn btn-primary">Ingresar</a>
 </div>
 </div>
-<div class="col-md">
-<div style="height:100%;" class="card bg-dark text-light p-5">
-<div class="h1 mb-3">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-plus" viewBox="0 0 16 16">
-<path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z"/>
-<path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z"/>
-<path d="M8.5 6.5a.5.5 0 0 0-1 0V8H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V9H10a.5.5 0 0 0 0-1H8.5V6.5Z"/>
-</svg>
-</div>
-<h3 class="card-title mb-4">Registro Trabajador</h3>
-<p style="height:60%;" class="card-text">
-En este apartado pordras saber todo lo que hay en el inventario y actualizar o registrar todos las entradas y salidas.
-</p>
-<a href="http://" class="btn btn-primary">Ingresar</a>
-</div>
-</div>
-<div class="col-md">
-<div style="height:100%;" class="card bg-dark text-light p-5">
-<div class="h1 mb-3">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-receipt-cutoff" viewBox="0 0 16 16">
-<path d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zM11.5 4a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/>
-<path d="M2.354.646a.5.5 0 0 0-.801.13l-.5 1A.5.5 0 0 0 1 2v13H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H15V2a.5.5 0 0 0-.053-.224l-.5-1a.5.5 0 0 0-.8-.13L13 1.293l-.646-.647a.5.5 0 0 0-.708 0L11 1.293l-.646-.647a.5.5 0 0 0-.708 0L9 1.293 8.354.646a.5.5 0 0 0-.708 0L7 1.293 6.354.646a.5.5 0 0 0-.708 0L5 1.293 4.354.646a.5.5 0 0 0-.708 0L3 1.293 2.354.646zm-.217 1.198.51.51a.5.5 0 0 0 .707 0L4 1.707l.646.647a.5.5 0 0 0 .708 0L6 1.707l.646.647a.5.5 0 0 0 .708 0L8 1.707l.646.647a.5.5 0 0 0 .708 0L10 1.707l.646.647a.5.5 0 0 0 .708 0L12 1.707l.646.647a.5.5 0 0 0 .708 0l.509-.51.137.274V15H2V2.118l.137-.274z"/>
-</svg>
-</div>
-<h3 class="card-title mb-4">Registro Proveedores</h3>
-<p style="height:60%;" class="card-text" >
-En este apartado podras consultar todas las facturas que tiene hasta el dia la empresa con la informacion introducida por la empresa
-</p>
-<a href="../vistas/registros/registro_proveedores.php" class="btn btn-primary">Ingresar</a>
-</div>
-</div>
-</div>
-</div>
 </section>
 <section class="bg-dark text-light p-5" id="learn">
     <div class="container py-5">
@@ -249,7 +216,23 @@ En este apartado podras consultar todas las facturas que tiene hasta el dia la e
 <p style="height:50%; " class="card-text">
 En Este apartado podras registrar a todos los usuarios que interactuan con el sistema.
 </p>
-<a href="../vistas/registros/registro_producto/registro_productos.php" class="btn btn-primary">Ingresar</a>
+<a href="../vistas/registros/registro_productos.php" class="btn btn-primary">Ingresar</a>
+</div>
+</div>
+<div class="col-md">
+<div style="height:100%;" class="card bg-dark text-light p-5">
+<div class="h1 mb-3">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-plus" viewBox="0 0 16 16">
+<path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z"/>
+<path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z"/>
+<path d="M8.5 6.5a.5.5 0 0 0-1 0V8H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V9H10a.5.5 0 0 0 0-1H8.5V6.5Z"/>
+</svg>
+</div>
+<h3 class="card-title mb-4">Consutar producto</h3>
+<p style="height:60%;" class="card-text">
+En este apartado pordras saber todo lo que hay en el inventario y actualizar o registrar todos las entradas y salidas.
+</p>
+<a href="../vistas/consultar_productos.php" class="btn btn-primary">Ingresar</a>
 </div>
 </div>
 <div class="col-md">
@@ -267,6 +250,24 @@ En Este apartado podras registrar a todos los usuarios que interactuan con el si
 En este apartado podras registrar todas las vantas de los productos o servicios que se hicieron en la empresa.
 </p>
 <a href="../vistas/registros/registro_tipo_producto.php" class="btn btn-primary">Ingresar</a>
+</div>
+</div>
+<div class="col-md">
+<div style="height:100%;" class="card bg-dark text-light p-5">
+<div class="h1 mb-3">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-plus" viewBox="0 0 16 16">
+<path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z"/>
+<path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z"/>
+<path d="M8.5 6.5a.5.5 0 0 0-1 0V8H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V9H10a.5.5 0 0 0 0-1H8.5V6.5Z"/>
+</svg>
+</div>
+<h3 class="card-title mb-4">Consutar tipo de producto</h3>
+<p style="height:60%;" class="card-text">
+En este apartado pordras saber todo lo que hay en el inventario y actualizar o registrar todos las entradas y salidas.
+</p>
+<a href="../vistas/consultar_productos.php" class="btn btn-primary">Ingresar</a>
+</div>
+</div>
 </div>
 </div>
 </section>
