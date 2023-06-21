@@ -1,6 +1,7 @@
-<?php include('db.php')?>
-<?php include("../includes/head.php")?>
-    <form action="guardar_producto.php" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
+<?php include('../db.php')?>
+<?php include("../../includes/head.php")?>
+<main class="bg-dark text-light p-5 text-center text-sm-start">
+    <form action="../registro_proveedores/guardar_proveedores.php" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
 	<h1 style="text-align: center;">REGISTRO DE PROVEEDORES</h1>
 	<hr>
     <table>
@@ -56,51 +57,19 @@
 	    <br>
         <table>
         <tr>
-            <div class="esp col-6" >
+            <div style="margin-right: 12%" class="esp col-3" >
                 <button type="submit" name="guardar_proveedores" value="guardar_proveedores" class="btn btn-success">Guardar</button>
             </div>
-            <div class="esp col-6">
+            <div style="margin-right: 13%" class="esp col-3">
                 <button class="btn btn-warning" type="reset">Limpiar datos</button>
+            </div>
+            <div  class="esp col-3">
+                <a href="../registro_proveedores/consultar_proveedores.php" class="btn btn-primary">Consultar Producto</a>
             </div>
         </tr>
         </table>
     </table>
     </form>
-    <hr>
-    <div class="container-lg">
-            <table class="table">
-            <thead>
-                <tr>
-                    <h1 style="text-align: center;">REGISTRADOS PROVEEDORES</h1>
-                    <br>
-                </tr>
-                <tr style="text-align: center;">
-                    <th scope="col">NIP PROVEEROR</th>
-                    <th scope="col">NOMBRE DEL PROVEEDOR</th>
-                    <th scope="col">DIRECCION</th>
-                    <th scope="col">ESTADOS</th>
-                </tr>
-            </thead>
-            <tbody>
-                    <?php
-                        $query = "SELECT * FROM proveedores";
-                        $resulproductos = mysqli_query($conn, $query);
-                        while($filas = mysqli_fetch_array($resulproductos)){?>
-                            <tr  style="text-align: center;">
-                                <td><?php echo $filas['PrId'] ?></td>
-                                <td><?php echo $filas['PrNomPr'] ?></td>
-                                <td><?php echo $filas['PrDirr'] ?></td>
-                                <td>
-                                    <a href="editar_proveedores.php?id=<?php echo $filas['PrId']?>">Editar</a>
-                                    <a href="eliminar_productos.php?id=<?php echo $filas['PrId']?>">Eliminar</a>
-                                </td>
-                            </tr>
-                    <?php } ?> 
-                </tbody> 
-            </tbody>
-        </table>
-    </div>
-    <br>
-<?php include("../includes/footer.php")?>
-</body>
-</html>
+</main>
+<?php include("../../includes/footer.php") ?>
+

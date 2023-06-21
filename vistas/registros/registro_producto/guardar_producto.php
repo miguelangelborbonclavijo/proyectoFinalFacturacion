@@ -1,5 +1,5 @@
 <?php
-    include("db.php");
+    include("../db.php");
     if(isset($_POST['guardar_producto'])){
         $TipPro = $_POST['TipPro'];
         $DesPro = $_POST['DesPro'];
@@ -8,6 +8,6 @@
         $query ="INSERT INTO productos ( ProTip, ProDes, ProPreCo, ProPreVe) VALUES 
         ('$TipPro','$DesPro','$PreCom','$PreVen')";
         mysqli_query($conn, $query);
-        header("Location: ../registros/registro_producto/registro_productos.php");
+        header("Location: ../registro_producto/registro_productos.php");
     }   
 ?>

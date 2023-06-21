@@ -1,5 +1,5 @@
 <?php
-    include("db.php");
+    include("../db.php");
     if(isset($_POST['guardar_proveedores'])){
         $NipProv = $_POST['NipPro'];
         $NomProv = $_POST['NomPro'];
@@ -7,6 +7,6 @@
         $query ="INSERT INTO proveedores (PrId, PrNomPr, PrDirr) VALUES 
         ('$NipProv','$NomProv','$Dirr')";
         mysqli_query($conn, $query);
-        header("Location: ../registros/registro_proveedores.php");
+        header("Location: ../registro_proveedores/registro_proveedor.php");
     }
 ?>

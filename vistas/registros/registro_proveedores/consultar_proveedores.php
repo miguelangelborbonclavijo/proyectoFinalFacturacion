@@ -1,4 +1,4 @@
-<?php include("db.php")?>
+<?php include("../db.php")?>
 <?php include("../../includes/head.php")?> 
 <main tyle="margin-top:30px;">
 <div class="container-lg">
@@ -25,8 +25,8 @@
                                 <td><?php echo $filas['PrNomPr'] ?></td>
                                 <td><?php echo $filas['PrDirr'] ?></td>
                                 <td>
-                                    <a href="editar_proveedores.php?id=<?php echo $filas['PrId']?>">Editar</a>
-                                    <a href="eliminar_productos.php?id=<?php echo $filas['PrId']?>">Eliminar</a>
+                                    <a href="../registro_proveedores/editar_proveedores.php?id=<?php echo $filas['PrId']?>">Editar</a>
+                                    <a href="../registro_proveedores/eliminar_proveedores.php?id=<?php echo $filas['PrId']?>">Eliminar</a>
                                 </td>
                             </tr>
                     <?php } ?> 
@@ -35,4 +35,4 @@
         </table>
     </div>
 </main>
-<?php include("../includes/footer.php")?>
+<?php include("../../includes/footer.php")?>

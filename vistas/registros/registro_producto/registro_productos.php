@@ -1,5 +1,6 @@
+<?php include('../db.php')?>
 <?php include("../../includes/head.php")?>
-<main style="margin-top:50px;">
+<main class="bg-dark text-light p-5 text-center text-sm-start">
     <form action="../registro_producto/guardar_producto.php" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
         <h1 style="text-align: center;">REGISTRO DE PRODUCTOS</h1>
         <hr>
@@ -71,11 +72,11 @@
                         <button class="btn btn-warning" type="reset">Limpiar datos</button>
                     </div>
                     <div  class="esp col-3">
-                        <a href="../registros/consultar_productos.php" class="btn btn-primary">Consultar Producto</a>
+                        <a href="../registro_producto/consultar_productos.php" class="btn btn-primary">Consultar Producto</a>
                     </div>
                 </tr>
             </table>
         </table>
     </form>
 </main>
-<?php include("../includes/footer.php") ?>
+<?php include("../../includes/footer.php") ?>
