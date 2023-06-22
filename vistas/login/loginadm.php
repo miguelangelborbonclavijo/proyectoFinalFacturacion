@@ -27,6 +27,7 @@
                             <label for="password">Confirm Password</label>
                             <input type="password" class="form-control" id="password2" placeholder="Enter Password">
                         </div>-->
+                        <a href="../inicio_usuarios/homeadm.php">ir</a>
                         <button type="submit" class="btn btn-primary" name="conflogadm">Ingresar</button>
                     </form>
                 </div>

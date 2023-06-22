@@ -27,17 +27,6 @@
                 </div>
             </div>
             <div class="col-md-6 position-relative">
-                <label for="inputState" class="form-label" name="TipoCli">Tipo de cliente:</label>
-                <select id="inputState" class="form-select" class="form-control" id="validationTooltip01" required name="TipoCli">
-                    <option selected>Seleccione su documento</option>
-                    <option value="1">1. BASICO</option>
-                    <option value="2">2. PREMIU</option>
-                    <div id="validationServer04Feedback" class="invalid-feedback">
-                        Por favor seleccion su tipo de documento
-                    </div>
-                </select>
-            </div>
-            <div class="col-md-6 position-relative">
                 <label for="inputState" class="form-label" name="EstaCli">Estado de Clientes:</label>
                 <select id="inputState" class="form-select" class="form-control" id="validationTooltip01" required name="EstaCli">
                     <option selected>Seleccione su documento</option>
@@ -48,7 +37,7 @@
                     </div>
                 </select>
             </div>
-            <div class="col-md-6 position-relative">
+            <div class="col-md-12 position-relative">
                 <label for="validationTooltip01" class="form-label">Dirreccion de Clientes:</label>
                 <input type="text" class="form-control" id="validationTooltip01" name="DirreCli" required>
                 <div class="valid-tooltip">

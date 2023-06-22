@@ -1,4 +1,4 @@
-<?php include("../vistas/includes/head.php") ?>
+<?php include("../../vistas/includes/head.php") ?>
 <section class="bg-dark text-light p-5 text-center text-sm-start" id="home">
     <div class="container py-5">
         <div class="d-sm-flex align-item-center">
@@ -13,7 +13,7 @@
                 <button class="btn btn-primary btn-lg">Sobre nosotros</button>
             </div>
             <a href="">
-                <img src="../vistas/img/img1.png" class="img-fluid" width="1000" alt="">
+                <img src="../img/img1.png" class="img-fluid" width="1000" alt="">
             </a>
         </div>
     </div>
@@ -76,7 +76,7 @@
                     <p style="height:50%;" class="card-text">
                         En Este apartado podras registrar a todos los usuarios que interactuan con el sistema.
                     </p>
-                    <a href="../vistas/registros/registro_persona/registro_personas.php" class="btn btn-primary">Ingresar</a>
+                    <a href="../registros/registro_persona/registro_personas.php" class="btn btn-primary">Ingresar</a>
                 </div>
             </div>
             <div class="col-md">
@@ -93,7 +93,7 @@
                     <p style="height:50%;" class="card-text">
                         En este apartado podras registrar todas las vantas de los productos o servicios que se hicieron en la empresa.
                     </p>
-                    <a href="../vistas/registros/registro_clientes/registro_clientes.php" class="btn btn-primary">Ingresar</a>
+                    <a href="../registros/registro_clientes/registro_clientes.php" class="btn btn-primary">Ingresar</a>
                 </div>
             </div>
             <div class="col-md">
@@ -109,7 +109,7 @@
                     <p style="height:60%;" class="card-text">
                         En este apartado pordras saber todo lo que hay en el inventario y actualizar o registrar todos las entradas y salidas.
                     </p>
-                    <a href="../vistas/registros/registro_trabajador/registro_trabajador.php" class="btn btn-primary">Ingresar</a>
+                    <a href="../registros/registro_trabajador/registro_trabajador.php" class="btn btn-primary">Ingresar</a>
                 </div>
             </div>
             <div class="col-md">
@@ -124,7 +124,7 @@
                     <p style="height:60%;" class="card-text">
                         En este apartado podras consultar todas las facturas que tiene hasta el dia la empresa con la informacion introducida por la empresa
                     </p>
-                    <a href="../vistas/registros/registro_proveedores/registro_proveedor.php" class="btn btn-primary">Ingresar</a>
+                    <a href="../registros/registro_proveedores/registro_proveedor.php" class="btn btn-primary">Ingresar</a>
                 </div>
             </div>
         </div>
@@ -162,7 +162,7 @@
                     <p style="height:50%;" class="card-text">
                         En Este apartado podras registrar a todos los usuarios que interactuan con el sistema.
                     </p>
-                    <a href="../vistas/registros/registro_soporte/registro_soportes.php" class="btn btn-primary">Ingresar</a>
+                    <a href="../registros/registro_soporte/registro_soportes.php" class="btn btn-primary">Ingresar</a>
                 </div>
             </div>
             <div class="col-md">
@@ -175,11 +175,11 @@
                             <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z" />
                         </svg>
                     </div>
-                    <h3 class="card-title mb-4">Registrar Ventas</h3>
+                    <h3 class="card-title mb-4">Registrar <br>  Ventas</h3>
                     <p style="height:50%;" class="card-text">
                         En este apartado podras registrar todas las vantas de los productos o servicios que se hicieron en la empresa.
                     </p>
-                    <a href="" class="btn btn-primary">Ingresar</a>
+                    <a href="../ventas/ele_venta.php" class="btn btn-primary">Ingresar</a>
                 </div>
             </div>
             <div class="col-md">
@@ -195,7 +195,7 @@
                     <p style="height:60%;" class="card-text">
                         En este apartado pordras saber todo lo que hay en el inventario y actualizar o registrar todos las entradas y salidas.
                     </p>
-                    <a href="../vistas/inventario/registros_inventario.php" class="btn btn-primary">Ingresar</a>
+                    <a href="../inventario/registros_inventario.php" class="btn btn-primary">Ingresar</a>
                 </div>
             </div>
             <div class="col-md">
@@ -206,11 +206,11 @@
                             <path d="M2.354.646a.5.5 0 0 0-.801.13l-.5 1A.5.5 0 0 0 1 2v13H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H15V2a.5.5 0 0 0-.053-.224l-.5-1a.5.5 0 0 0-.8-.13L13 1.293l-.646-.647a.5.5 0 0 0-.708 0L11 1.293l-.646-.647a.5.5 0 0 0-.708 0L9 1.293 8.354.646a.5.5 0 0 0-.708 0L7 1.293 6.354.646a.5.5 0 0 0-.708 0L5 1.293 4.354.646a.5.5 0 0 0-.708 0L3 1.293 2.354.646zm-.217 1.198.51.51a.5.5 0 0 0 .707 0L4 1.707l.646.647a.5.5 0 0 0 .708 0L6 1.707l.646.647a.5.5 0 0 0 .708 0L8 1.707l.646.647a.5.5 0 0 0 .708 0L10 1.707l.646.647a.5.5 0 0 0 .708 0L12 1.707l.646.647a.5.5 0 0 0 .708 0l.509-.51.137.274V15H2V2.118l.137-.274z" />
                         </svg>
                     </div>
-                    <h3 class="card-title mb-4">Facturas</h3>
+                    <h3 class="card-title mb-4">Registrar Compras</h3>
                     <p style="height:60%;" class="card-text">
                         En este apartado podras consultar todas las facturas que tiene hasta el dia la empresa con la informacion introducida por la empresa
                     </p>
-                    <a href="http://" class="btn btn-primary">Ingresar</a>
+                    <a href="../compras/entradas.php" class="btn btn-primary">Ingresar</a>
                 </div>
             </div>
         </div>
@@ -249,7 +249,7 @@
                         <p style="height:50%; " class="card-text">
                             En Este apartado podras registrar a todos los usuarios que interactuan con el sistema.
                         </p>
-                        <a href="../vistas/registros/registro_producto/registro_productos.php" class="btn btn-primary">Ingresar</a>
+                        <a href="../registros/registro_producto/registro_productos.php" class="btn btn-primary">Ingresar</a>
                     </div>
                 </div>
                 <div class="col-md">
@@ -266,7 +266,7 @@
                         <p style="height:50%;" class="card-text">
                             En este apartado podras registrar todas las vantas de los productos o servicios que se hicieron en la empresa.
                         </p>
-                        <a href="../vistas/registros/registro_tipo_productos/registro_tipo_producto.php" class="btn btn-primary">Ingresar</a>
+                        <a href="../registros/registro_tipo_productos/registro_tipo_producto.php" class="btn btn-primary">Ingresar</a>
                     </div>
                 </div>
     </section>
@@ -325,8 +325,8 @@
         </div>
     </div>
 </section>
-<?php include("../vistas/includes/creadores.php") ?>
-<?php include("../vistas/includes/footer.php") ?>
+<?php include("../../vistas/includes/creadores.php") ?>
+<?php include("../../vistas/includes/footer.php") ?>
 </body>
 
 </html>

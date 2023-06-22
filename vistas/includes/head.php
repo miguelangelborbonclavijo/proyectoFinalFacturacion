@@ -22,7 +22,13 @@
                         <a class="nav-link active" aria-current="page" href="../inicios_usuarios/index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../vistas/index.php">Perfil</a>
+                        <a class="nav-link active" aria-current="page" href="../../../proyectoFinalFacturacion/vistas/inicio_usuarios/homeadm.php">Administrador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../../../proyectoFinalFacturacion/vistas/inicio_usuarios/hometra.php">Trabajador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../../../proyectoFinalFacturacion/vistas/inicio_usuarios/homecli.php">Clientes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#registros">Registros</a>
@@ -43,7 +49,7 @@
                         <a class="nav-link active" aria-current="page" href="#preguntas">Ayuda</a>
                     </li>
                     <li>
-                        <a href="../vistas/login/tipo_usuario.php" class="btn btn-primary">Iniciar sesión</a>
+                        <a href="../../../proyectoFinalFacturacion/vistas/login/iniciologin.php" class="btn btn-primary">Iniciar sesión</a>
                     </li>
                 </ul>
             </div>

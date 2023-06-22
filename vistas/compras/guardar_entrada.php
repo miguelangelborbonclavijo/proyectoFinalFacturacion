@@ -7,6 +7,6 @@
         $query ="INSERT INTO compras (ComPvId,ComPrId,ComCan) VALUES 
         ('$CoProv','$CoProd','$Canti')";
         mysqli_query($conn, $query);
-        header("Location: ../../../../../proyectoFinalFacturacion/vistas/inventario/entradas.php");
+        header("Location: ../../../../../proyectoFinalFacturacion/vistas/compras/consultar_entradas.php");
     }
 ?>

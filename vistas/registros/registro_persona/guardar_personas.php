@@ -13,4 +13,4 @@
         mysqli_query($conn, $query);
         header("Location: ../registro_persona/registro_personas.php");
     }
-?>
+?> 

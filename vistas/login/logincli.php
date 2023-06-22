@@ -27,6 +27,7 @@
                             <label for="password">Confirm Password</label>
                             <input type="password" class="form-control" id="password2" placeholder="Enter Password">
                         </div>-->
+                        <a href="../inicio_usuarios/homecli.php">ir</a>
                         <button type="submit" class="btn btn-primary" name="conflogcli">Ingresar</button>
                     </form>
                 </div>

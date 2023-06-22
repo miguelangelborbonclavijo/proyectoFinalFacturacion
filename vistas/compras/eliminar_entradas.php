@@ -7,6 +7,6 @@
         if (!$resuleliminar){
             die ("Error eliminar");
         }
-        header("Location: ../../../../../proyectoFinalFacturacion/vistas/inventario/entradas.php"); 
+        header("Location: ../../../../../proyectoFinalFacturacion/vistas/compras/entradas.php"); 
     }
 ?>

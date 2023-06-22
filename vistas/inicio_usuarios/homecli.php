@@ -1,4 +1,4 @@
-<?php include("../vistas/includes/head.php") ?>
+<?php include("../../vistas/includes/head.php") ?>
 <section class="bg-dark text-light p-5 text-center text-sm-start" id="home">
     <div class="container py-5">
         <div class="d-sm-flex align-item-center">
@@ -13,7 +13,7 @@
                 <button class="btn btn-primary btn-lg">Sobre nosotros</button>
             </div>
             <a href="">
-                <img src="../vistas/img/img1.png" class="img-fluid" width="1000" alt="">
+                <img src="../img/img1.png" class="img-fluid" width="1000" alt="">
             </a>
         </div>
     </div>
@@ -324,8 +324,8 @@
         </div>
     </div>
 </section>
-<?php include("../vistas/includes/creadores.php") ?>
-<?php include("../vistas/includes/footer.php") ?>
+<?php include("../../vistas/includes/creadores.php") ?>
+<?php include("../../vistas/includes/footer.php") ?>
 </body>
 
 </html>

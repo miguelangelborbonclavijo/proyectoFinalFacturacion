@@ -1,12 +1,12 @@
 <?php include('../registros/db.php')?>
 <?php include("../includes/head.php")?>
 <main class="bg-dark text-light p-5 text-center text-sm-start">
-<form action="../inventario/guardar_entrada.php" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
-    <h1 style="text-align: center;">REGISTRO DE TRABAJADOR</h1>
+<form action="../compras/guardar_entrada.php" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
+    <h1 style="text-align: center;">REGISTRO DE COMPRAS</h1>
     <table>
         <tr>
             <td></td>
-            <td style="width: 200px; text-align: center"><p><strong>DATOS DEL TRABAJADOR</strong></p></td>
+            <td style="width: 200px; text-align: center"><p><strong>DATOS DE COMPRA</strong></p></td>
             <td></td>
         </tr>
     </table>
@@ -64,7 +64,7 @@
                 <button class="btn btn-warning" type="reset">Limpiar datos</button>
             </div>
             <div class="esp col-3">
-                <a href="../inventario/consultar_entradas.php" class="btn btn-primary">Consultar clientes</a>
+                <a href="../compras/consultar_entradas.php" class="btn btn-primary">Consultar clientes</a>
             </div>
         </tr>
     </table>
