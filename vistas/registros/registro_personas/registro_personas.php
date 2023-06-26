@@ -1,6 +1,7 @@
 <?php include('../db.php') ?>
 <?php include("../../includes/head.php") ?>
 <main class="bg-dark text-light p-5 text-center text-sm-start">
+<a href="../../../../proyectoFinalFacturacion/vistas/inicio_usuarios/hometra.php" class="btn btn-primary">Regresar</a>
   <form action="../../../../proyectoFinalFacturacion/vistas/registros/registro_personas/guardar_personas.php" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
     <h1 style="text-align: center;">REGISTRO DE USUARIO</h1>
     <table>

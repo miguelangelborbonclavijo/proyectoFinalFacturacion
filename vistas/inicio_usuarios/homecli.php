@@ -1,4 +1,4 @@
-<?php include("../../vistas/includes/head.php") ?>
+<?php include("../../vistas/includes/headcli.php") ?>
 <section class="bg-dark text-light p-5 text-center text-sm-start" id="home">
     <div class="container py-5">
         <div class="d-sm-flex align-item-center">
@@ -75,7 +75,7 @@
                     <p style="height:50%;" class="card-text">
                         En Este apartado podras registrar a todos los usuarios que interactuan con el sistema.
                     </p>
-                    <a href="../../../proyectoFinalFacturacion/vistas/registros/registro_soporte/registro_soportes.php" class="btn btn-primary">Ingresar</a>
+                    <a href="../../../proyectoFinalFacturacion/vistas/Clientes/registro_soporte/registro_soportes.php" class="btn btn-primary">Ingresar</a>
                 </div>
             </div>
             <div class="col-md">
@@ -91,7 +91,7 @@
                     <p style="height:60%;" class="card-text">
                         En este apartado pordras saber todo lo que hay en el inventario y actualizar o registrar todos las entradas y salidas.
                     </p>
-                    <a href="../../../proyectoFinalFacturacion/vistas/compras/entradas.php" class="btn btn-primary">Ingresar</a>
+                    <a href="../../../proyectoFinalFacturacion/vistas/Clientes/ventas/ele_venta.php" class="btn btn-primary">Ingresar</a>
                 </div>
             </div>
         </div>

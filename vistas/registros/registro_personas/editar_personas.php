@@ -30,11 +30,10 @@ if (isset($_POST['actualizar_personas'])) {
   $PerCon = $_POST['PerCon'];
   $query = "UPDATE personas set PerTidId = '$PeTipDoc', PerNom1 = '$PriNom', PerNom2 = '$SegNom', PerApe1 = '$PriApe', PerApe2 = '$SegApe', PerCor = '$PerCor', PerCon = '$PerCon' WHERE PerId = $id";
   mysqli_query($conn, $query);
-  header("Location: ../registro_personas.php");
-  
 }
 ?>
 <main class="p-5 text-center text-sm-start">
+<a href="../../../../proyectoFinalFacturacion/vistas/registros/registro_personas/registro_personas.php" class="btn btn-primary">Regresar</a>
   <form action="../registro_personas/editar_personas.php?id=<?php echo $_GET['id']; ?>" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1"> 
   <h1 style="text-align: center;">REGISTRO DE USUARIO</h1>
     <table>

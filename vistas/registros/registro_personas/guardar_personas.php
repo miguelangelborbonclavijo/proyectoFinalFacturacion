@@ -14,6 +14,6 @@
         $sql="INSERT INTO  clientes (CliPerId,CliTipId,CliEsId,CliDirr) VALUES('$NumDocCli',1,1,'$DirrCli')"; 
         mysqli_query($conn, $query);
         mysqli_query($conn, $sql);
-        header("Location: ../../../../../../proyectoFinalFacturacion/vistas/ele_crerol.php");
+        header("Location: ../../../../../../proyectoFinalFacturacion/vistas/registros/registro_personas/registro_personas.php");
     }
 ?> 

@@ -1,6 +1,7 @@
 <?php include("../db.php") ?>
 <?php include("../../includes/head.php") ?>
 <main style="margin-top:30px;">
+<a href="../../../../proyectoFinalFacturacion/vistas/registros/registro_personas/registro_personas.php" class="btn btn-primary">Regresar</a>
   <div class="container-lg">
     <table class="table">
       <thead>

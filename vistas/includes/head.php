@@ -69,6 +69,9 @@
                     <li>
                         <a href="../../../proyectoFinalFacturacion/vistas/login/cerrar_cli.php">Salir</a>
                     </li>-->
+                    <li>
+                        <a href="../../../proyectoFinalFacturacion/vistas/login/iniciologin.php" class="btn btn-primary">Iniciar sesión</a>
+                    </li>
                 </ul>
             </div>
         </div>

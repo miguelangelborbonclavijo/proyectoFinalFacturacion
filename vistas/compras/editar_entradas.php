@@ -25,7 +25,7 @@ if (isset($_POST['guardar_inventario_entrada'])) {
 ?>
 <main class="bg-dark text-light p-5 text-center text-sm-start">
 <form action="../../../proyectoFinalFacturacion/vistas/compras/editar_entradas.php?id=<?php echo $_GET['id']; ?>" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
-    <h1 style="text-align: center;">REGISTRO DE TRABAJADOR</h1>
+    <h1 style="text-align: center;">EDITAR ENTRADAS</h1>
     <table>
         <tr>
             <td></td>

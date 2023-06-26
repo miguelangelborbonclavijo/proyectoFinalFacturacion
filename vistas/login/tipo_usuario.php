@@ -20,7 +20,7 @@
                     <p style="height:50%;" class="card-text">
                         En Este apartado podras registrar a todos los usuarios que interactuan con el sistema.
                     </p>
-                    <a href="../../../proyectoFinalFacturacion/vistas/registros/registro_clientes/registro_personas.php" class="btn btn-primary">Ingresar</a>
+                    <a href="../../vistas/inicio_usuarios/homecli.php" class="btn btn-primary">Ingresar</a>
                 </div>
             </div>
             <div class="col-md">
@@ -37,7 +37,7 @@
                     <p style="height:50%;" class="card-text">
                         En este apartado podras registrar todas las vantas de los productos o servicios que se hicieron en la empresa.
                     </p>
-                    <a href="../../../proyectoFinalFacturacion/vistas/registros/registro_trabajador/registro_trabajador.php" class="btn btn-primary">Ingresar</a>
+                    <a href="../../../proyectoFinalFacturacion/vistas/inicio_usuarios/hometra.php" class="btn btn-primary">Ingresar</a>
                 </div>
             </div>
             <div class="col-md">
@@ -54,7 +54,7 @@
                     <p style="height:50%;" class="card-text">
                         En este apartado podras registrar todas las vantas de los productos o servicios que se hicieron en la empresa.
                     </p>
-                    <a href="../../../proyectoFinalFacturacion/vistas/registros/registro_trabajador/registro_trabajador.php" class="btn btn-primary">Ingresar</a>
+                    <a href="../../../proyectoFinalFacturacion/vistas/inicio_usuarios/homeadm.php" class="btn btn-primary">Ingresar</a>
                 </div>
             </div>
             </div>

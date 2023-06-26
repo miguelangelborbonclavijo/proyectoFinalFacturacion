@@ -1,6 +1,7 @@
 <?php include('../db.php')?>
 <?php include("../../includes/head.php")?>
 <main class="bg-dark text-light p-5 text-center text-sm-start">
+<a href="../../../../proyectoFinalFacturacion/vistas/registros/registro_trabajador/registro_trabajador.php" class="btn btn-primary">Regresar</a>
 <form action="../registro_trabajador/guardar_trabajador.php" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
     <h1 style="text-align: center;">REGISTRO DE TRABAJADOR</h1>
     <table>

@@ -4,7 +4,7 @@
         <div class="row g-4">
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-uṕpercese font-weight-bold mb-4">FacElec</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga obcaecati, repellat alias modi ipsum voluptates omnis reprehenderit mollitia sequi, totam consectetur sint fugit beatae nihil cum. Quibusdam illo sapiente esse?</p>
+                <p>Somos una empresa nueva que su onjetivo es satisfacer las necesidades sde las empresas y sus clientes</p>
                 <a href="http://">
                     <svg class="text-dark mx-1 lead" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                         <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
@@ -28,7 +28,7 @@
             </div>
             <div class="col-lg-5 col-md-6">
                 <section class="p-5">
-                    <div class="container py-5">
+                    <div class="container py-1">
                         <div class="d-md-flex justify-content-between align-items-center">
                             <h3 class="text-uṕpercese font-weight-bold mb-4">Contactate con nosotros</h3>
                         </div>
