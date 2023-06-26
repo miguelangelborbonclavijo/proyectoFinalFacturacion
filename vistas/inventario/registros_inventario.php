@@ -17,7 +17,7 @@
                     <p style="height:50%;" class="card-text">
                         En Este apartado podras registrar a todos los usuarios que interactuan con el sistema.
                     </p>
-                    <a href="../inventario/productos.php" class="btn btn-primary">Ingresar</a>
+                    <a href="../../../proyectoFinalFacturacion/vistas/inventario/creacion_productos.php" class="btn btn-primary">Ingresar</a>
                 </div>
             </div>
             <div class="col-md">

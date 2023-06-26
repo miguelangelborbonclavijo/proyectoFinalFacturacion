@@ -7,53 +7,59 @@
             <tr>
                 <td></td>
                 <td style="width: 200px; text-align: center">
-                    <p><strong>DATOS DEl CODIGO DE VENTA</strong></p>
+                    <p class="text-light"><strong>DATOS DEl CODIGO DE VENTA</strong></p>
                 </td>
                 <td></td>
             </tr>
         </table>
         <br>
         <table>
-            <td>
-                <div class="col-md-12 position-relative">
-                    <label for="validationTooltip01" class="form-label">Codigo Trabajador:</label>
-                    <input type="number" class="form-control" id="validationTooltip01" name="CodTra" required>
-                    <div class="valid-tooltip">
-                        Documento valido...!
+            <tr>
+                <td>
+                    <div class="col-md-12 position-relative">
+                        <label for="validationTooltip01" class="form-label text-light">Codigo Trabajador:</label>
+                        <input type="number" class="form-control" id="validationTooltip01" name="CodTra" required>
+                        <div class="valid-tooltip">
+                            Documento valido...!
+                        </div>
+                        <div class="invalid-tooltip">
+                            Documento no valido.
+                        </div>
                     </div>
-                    <div class="invalid-tooltip">
-                        Documento no valido.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="col-md-12 position-relative">
+                        <label for="inputState" class="form-label text-light">Documento Clientes</label>
+                        <input type="number" class="form-control" id="validationTooltip01" name="CodCli" required>
+                        <div class="valid-tooltip">
+                            Documento valido...!
+                        </div>
+                        <div class="invalid-tooltip">
+                            Documento no valido.
+                        </div>
                     </div>
-                </div>
-            </td>
-            <td>
-                <div class="col-md-12 position-relative">
-                    <label for="inputState" class="form-label">Documento Clientes</label>
-                    <input type="number" class="form-control" id="validationTooltip01" name="CodCli" required>
-                    <div class="valid-tooltip">
-                        Documento valido...!
+                </td>
+            </tr>
+            <tr>
+                <?php
+                date_default_timezone_set('America/Bogota');
+                $fecha_actual = date("y-m-d H:i:s");
+                ?>
+                <td>
+                    <div class="col-md-12 position-relative">
+                        <label for="inputState" class="form-label text-light">Fecha</label>
+                        <input type="datetime" class="form-control" id="validationTooltip01" name="Fecha" required value="<?= $fecha_actual ?>">
+                        <div class="valid-tooltip">
+                            Documento valido...!
+                        </div>
+                        <div class="invalid-tooltip">
+                            Documento no valido.
+                        </div>
                     </div>
-                    <div class="invalid-tooltip">
-                        Documento no valido.
-                    </div>
-                </div>
-            </td>
-            <?php
-            date_default_timezone_set('America/Bogota');
-            $fecha_actual = date("y-m-d H:i:s");
-            ?>
-            <td>
-                <div class="col-md-12 position-relative">
-                    <label for="inputState" class="form-label">Fecha</label>
-                    <input type="datetime" class="form-control" id="validationTooltip01" name="Fecha" required value="<?= $fecha_actual ?>">
-                    <div class="valid-tooltip">
-                        Documento valido...!
-                    </div>
-                    <div class="invalid-tooltip">
-                        Documento no valido.
-                    </div>
-                </div>
-            </td>
+                </td>
+            </tr>
             <td>
         </table>
         <div style="margin-right:12%" class="esp col-3">

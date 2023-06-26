@@ -12,7 +12,7 @@
     </table>
     <br>
     <table>
-        <div class="col-md-4 position-relative">
+        <div class="col-md-6 position-relative">
             <label for="validationTooltip01" class="form-label">Codigo Proveedor:</label>
             <input type="number" class="form-control" id="validationTooltip01" name="CodProve" required>
             <div class="valid-tooltip">
@@ -22,7 +22,7 @@
                 Documento no valido.
             </div>
         </div>
-        <div class="col-md-4 position-relative">
+        <div class="col-md-6 position-relative">
             <label  for="inputState" class="form-label">Codigo del Producto:</label>
             <input type="number" class="form-control" id="validationTooltip01" name="CodProd" required>
             <div class="valid-tooltip">
@@ -33,9 +33,9 @@
             </div>
             
         </div>
-        <div class="col-md-4 position-relative">
+        <div class="col-md-6 position-relative">
             <label for="validationTooltip01" class="form-label">Cantidad:</label>
-            <input type="number" class="form-control" id="validationTooltip01" name="Cant" required>
+            <input type="number" class="form-control" id="validationTooltip01" name="Can" required>
             <div class="valid-tooltip">
             Documento valido...!
             </div>
@@ -43,6 +43,24 @@
                 Documento no valido.
             </div>
         </div>
+        <div class="col-md-6 position-relative">
+        <label for="validationCustomUsername" class="form-label">FECHA</label>
+        <?php
+        date_default_timezone_set('America/Bogota');
+        $fecha_actual = date("y-m-d H:i:s");
+        ?>
+        <input type="datetime" class="form-control" id="validationTooltip01" name="FechCli" placeholder="Ingrese Fecha" required value="<?= $fecha_actual ?>">
+        <div class="input-group has-validation">
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
+        </div>
+        <div class="col-md-6 position-relative">
+        </div>
+        <div class="invalid-tooltip">
+          Documento no valido.
+        </div>
+      </div>
         <br>
     <br>
     <table>

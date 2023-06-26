@@ -6,6 +6,10 @@
 		$resuleditar = mysqli_query($conn, $query);
 		if(mysqli_num_rows($resuleditar) ==1){
 			$filas = mysqli_fetch_array($resuleditar);
+            $NumDocCli = $filas['CliPerId'];
+            $TipoCli = $filas['CliTipId'];
+            $EstadoCli = $filas['CliEsId'];
+            $DirreCli = $filas['CliDirr'];
             
 		}
 	}
@@ -15,13 +19,13 @@
         $TipoCli = $_POST['TipoCli'];
         $EstadoCli = $_POST['EstaCli'];
         $DirreCli = $_POST['DirreCli'];
-        $query = "UPDATE clientes set NumDocuCli = '$NumDocCli', CliTipId = '$TipoCli', CliEsId = '$EstadoCli', CliDirr = '$DirreCli' WHERE  CliPerId = $id";
+        $query = "UPDATE clientes set CliPerId = '$NumDocCli', CliTipId = '$TipoCli', CliEsId = '$EstadoCli', CliDirr = '$DirreCli' WHERE  CliPerId = $id";
         mysqli_query($conn, $query);
-		header("Location: registro_soportes.php");
+		header("Location: ../../../../../../proyectoFinalFacturacion/vistas/inicio_usuarios/homecli.php");
     }
 ?>
 <?php include("../../includes/head.php")?>
-<form action="editar_clientes.php" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
+<form action="editar_clientes.php?id=<?php echo $_GET['id']; ?>" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
         <h1 style="text-align: center;">REGISTRO DE CLIENTES</h1>
         <hr>
         <table>

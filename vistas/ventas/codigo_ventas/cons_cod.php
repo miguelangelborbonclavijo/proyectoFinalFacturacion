@@ -23,8 +23,8 @@
                 while ($filas = mysqli_fetch_array($resulproductos)) { ?>
                     <tr style="text-align: center;">
                         <td><?php echo $filas['CodVenId'] ?></td>
-                        <td><?php echo $filas['CodVenCl'] ?></td>
                         <td><?php echo $filas['CodTraId'] ?></td>
+                        <td><?php echo $filas['CodVenCl'] ?></td>
                         <td><?php echo $filas['CodFec'] ?></td>
                         <td>
                             <a href="../codigo_ventas/edita_cod.php?id=<?php echo $filas['CodVenId'] ?>">

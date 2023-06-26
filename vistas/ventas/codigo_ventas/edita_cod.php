@@ -6,25 +6,24 @@ if (isset($_GET['id'])) {
     $resuleditar = mysqli_query($conn, $query);
     if (mysqli_num_rows($resuleditar) == 1) {
         $filas = mysqli_fetch_array($resuleditar);
-        $CoCliId = $filas['CodVenCl'];
         $CoTraId = $filas['CodTraId'];
+        $CoCliId = $filas['CodVenCl'];
         $CodFec = $filas['CodFec'];
         
     }
 }
 if (isset($_POST['actualizar_cod'])) {
     $id = $_GET['id'];
-    $CoCliId = $_POST['CodCli'];
     $CoTraId = $_POST['CodTra'];
-    $CodFec = $_POST['Fecha'];
-    $query = "UPDATE codven set CodVenCl = '$CoCliId', CodTraId = '$CoTraId', CodFec = '$CodFec' WHERE CodVenId = $id";
+    $CoCliId = $_POST['CodCli'];
+    $query = "UPDATE  codven set  CodVenCl = '$CoCliId', CodTraId  = '$CoTraId' WHERE CodVenId = '$id'";
     mysqli_query($conn, $query);
-    header("Location: ../../../../../../proyectoFinalFacturacion/vistas/ventas/codigo_ventas/cod_venta.php");
+    header("Location: ../edita_cod.php");
 }
 ?>
 <?php include("../../includes/head.php") ?>
 <main class="p-5 text-center text-sm-start">
-    <form action="../../../../proyectoFinalFacturacion/vistas//ventas/editar_ventas.php?id=<?php echo $_GET['id']; ?>" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
+    <form action="../../../../proyectoFinalFacturacion/vistas/ventas/codigo_ventas/edita_cod.php?id=<?php echo $_GET['id']; ?>" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
         <h1 style="text-align: center;">REGISTRO DE CODIGO DE VENTAS</h1>
         <table>
             <tr>
@@ -39,7 +38,7 @@ if (isset($_POST['actualizar_cod'])) {
         <table>
             <td>
                 <div class="col-md-12 position-relative">
-                    <label for="validationTooltip01" class="form-label">Codigo Trabajador:</label>
+                    <label for="validationTooltip01" class="form-label">Codigo Cliente:</label>
                     <input type="number" class="form-control" id="validationTooltip01" name="CodTra" required value="<?php echo $CoCliId ?>">
                     <div class="valid-tooltip">
                         Documento valido...!
@@ -51,7 +50,7 @@ if (isset($_POST['actualizar_cod'])) {
             </td>
             <td>
                 <div class="col-md-12 position-relative">
-                    <label for="inputState" class="form-label">Documento Clientes</label> 
+                    <label for="inputState" class="form-label">Documento Trabajador</label> 
                     <input type="number" class="form-control" id="validationTooltip01" name="CodCli" required value="<?php echo $CoTraId ?>">
                     <div class="valid-tooltip">
                         Documento valido...!

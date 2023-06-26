@@ -155,7 +155,7 @@
                             <path d="M2.354.646a.5.5 0 0 0-.801.13l-.5 1A.5.5 0 0 0 1 2v13H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H15V2a.5.5 0 0 0-.053-.224l-.5-1a.5.5 0 0 0-.8-.13L13 1.293l-.646-.647a.5.5 0 0 0-.708 0L11 1.293l-.646-.647a.5.5 0 0 0-.708 0L9 1.293 8.354.646a.5.5 0 0 0-.708 0L7 1.293 6.354.646a.5.5 0 0 0-.708 0L5 1.293 4.354.646a.5.5 0 0 0-.708 0L3 1.293 2.354.646zm-.217 1.198.51.51a.5.5 0 0 0 .707 0L4 1.707l.646.647a.5.5 0 0 0 .708 0L6 1.707l.646.647a.5.5 0 0 0 .708 0L8 1.707l.646.647a.5.5 0 0 0 .708 0L10 1.707l.646.647a.5.5 0 0 0 .708 0L12 1.707l.646.647a.5.5 0 0 0 .708 0l.509-.51.137.274V15H2V2.118l.137-.274z" />
                         </svg>
                     </div>
-                    <h3 class="card-title mb-4">Facturas</h3>
+                    <h3 class="card-title mb-4">Compras</h3>
                     <p style="height:60%;" class="card-text">
                         En este apartado podras consultar todas las facturas que tiene hasta el dia la empresa con la informacion introducida por la empresa
                     </p>
@@ -308,8 +308,7 @@
         </div>
     </div>
 </section>
-<?php include("../../vistas/includes/creadores.php") ?>
-<?php include("../../includes/footer.php") ?>
+<?php include("../includes/footer.php") ?>
 </body>
 
 </html>
