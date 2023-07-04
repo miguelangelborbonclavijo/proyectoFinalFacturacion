@@ -1,0 +1,40 @@
+body{
+    background: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    height:100vh;
+    font-family: 'open sans', sans-serif;
+}
+
+img{
+    width: 57%;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 20px;
+    padding: 20px3;
+}
+
+button{
+    padding: 10px 20px;
+    border-radius: 15px;
+    border:none;
+    background: rgb(154, 196, 230);
+    color: rgb(244, 242, 239);
+}
+
+@media screen and (max-width: 630px){
+    h1{
+font-size: 16px;
+    }
+
+}

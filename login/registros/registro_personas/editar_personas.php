@@ -1,13 +1,17 @@
 <?php
     session_start();
-    if(!isset($_SESSION['id'])){
-    }
-    $nombre = $_SESSION['nombre'];	
-    include("../../includes/head.php");
-    echo $nombre;
+    include('../../../login/db.php');
 ?>
+<?php 
+    if(!isset($_SESSION['usuario'])){
+        header("Location: ../../login/principal.php");
+    } ?>
+<?php  include('../../../login/includes/head.php'); 
+    $nombre = $_SESSION['nombre'];	
+
+    echo $nombre;?>
+<button><a href="../../../login/salir.php">Salir</a></button><br>
 <?php include('../db.php') ?>
-<button><a href="../../../login/salir.php.">Salir</a></button>
 <?php
 include("../../db.php");
 if (isset($_GET['id'])) {
@@ -39,7 +43,7 @@ if (isset($_POST['actualizar_personas'])) {
 }
 ?>
 <main class="p-5 text-center text-sm-start">
-<a href="../../../login/registros/registro_personas/registro_personas.php" class="btn btn-primary">Regresar</a>
+<a href="../../../login/registros/registro_personas/consultar_personas.php" class="btn btn-primary">Regresar</a>
   <form action="../registro_personas/editar_personas.php?id=<?php echo $_GET['id']; ?>" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1"> 
   <h1 style="text-align: center;">REGISTRO DE USUARIO</h1>
     <table>

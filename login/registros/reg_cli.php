@@ -1,13 +1,16 @@
 <?php
     session_start();
-    include('../../login/includes/head.php');
-    if(!isset($_SESSION['id'])){
-    }
+    include('../../login/db.php');
+?>
+<?php 
+    if(!isset($_SESSION['usuario'])){
+        header("Location: ../../login/principal.php");
+    } ?>
+<?php  include('../../login/includes/head.php'); 
     $nombre = $_SESSION['nombre'];	
 
-    echo $nombre;
-?>
-<button><a href="salir.php">Salir</a></button>
+    echo $nombre;?>
+<button><a href="../../login/salir.php">Salir</a></button><br>
 <!--<section class="bg-primary text-light p-5">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">

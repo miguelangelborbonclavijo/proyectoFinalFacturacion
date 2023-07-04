@@ -1,5 +1,16 @@
-<?php include('../../registros/db.php') ?>
-<?php include("../../includes/head.php") ?>
+<?php
+    session_start();
+    include('../../../login/db.php')
+?>
+<?php 
+    if(!isset($_SESSION['usuario'])){
+        header("Location: ../../login/principal.php");
+    } ?>
+<?php  include('../../../login/includes/head.php'); 
+    $nombre = $_SESSION['nombre'];	
+
+    echo $nombre;?>
+<button><a href="../../salir.php">Salir</a></button>
 <main class="bg-dark text-light p-5 text-center text-sm-start">
 <a href="../../../login/ventas/ele_venta.php" class="btn btn-primary">Regresar</a>
     <form action="../../../login/ventas/codigo_ventas/guardar_cod.php" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-2">
@@ -74,5 +85,35 @@
         </div>
         </td>
     </form>
+</main>
+<main class="p-5 text-center text-sm-start">
+    <div class="container-lg">
+        <table class="table">
+            <thead>
+                <tr>
+                    <h1 style="text-align: center;">TRABAJADORES REGISTRADOS</h1>
+                    <br>
+                </tr>
+                <tr style="text-align: center;">
+                    <th scope="col">CODIGO TRABAJADOR</th>
+                    <th scope="col">NUMERO DE DOCUMENTO</th>
+                    <th scope="col">TIPO DE CARGO</th>>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $query = "SELECT * FROM trabajadores";
+                $resulproductos = mysqli_query($conn, $query);
+                while ($filas = mysqli_fetch_array($resulproductos)) { ?>
+                    <tr style="text-align: center;">
+                        <td><?php echo $filas['TraId']?></td>
+                        <td><?php echo $filas['TraPerId'] ?></td>
+                        <td><?php echo $filas['TraCarId'] ?></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+            </tbody>
+        </table>
+    </div>
 </main>
 <?php include("../../includes/footer.php") ?>

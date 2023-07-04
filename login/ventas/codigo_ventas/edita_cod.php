@@ -20,7 +20,18 @@ if (isset($_POST['actualizar_cod'])) {
     mysqli_query($conn, $query);
 }
 ?>
-<?php include("../../includes/head.php") ?>
+<?php
+    session_start();
+?>
+<?php 
+    if(!isset($_SESSION['usuario'])){
+        header("Location: ../../login/principal.php");
+    } ?>
+<?php  include('../../../login/includes/head.php'); 
+    $nombre = $_SESSION['nombre'];	
+
+    echo $nombre;?>
+<button><a href="../../salir.php">Salir</a></button>
 <main class="p-5 text-center text-sm-start">
 <a href="../../../login/ventas/codigo_ventas/cons_cod.php" class="btn btn-primary">Regresar</a>
     <form action="../../../login/ventas/codigo_ventas/edita_cod.php?id=<?php echo $_GET['id']; ?>" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">

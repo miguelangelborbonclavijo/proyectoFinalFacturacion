@@ -2,110 +2,54 @@
 include("../../login/db.php");
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $query = "SELECT * FROM productos WHERE ProId = $id";
+    $query = "SELECT * FROM ventas WHERE VenId = $id";
     $resuleditar = mysqli_query($conn, $query);
     if (mysqli_num_rows($resuleditar) == 1) {
         $filas = mysqli_fetch_array($resuleditar);
-        $TipPro = $filas['ProTip'];
-        $DesPro = $filas['ProDes'];
-        $PreCom = $filas['ProPreCo'];
-        $PreVen = $filas['ProPreVe'];
+        $VenId = $filas['VenId'];
+        $VenCodId = $filas['VenCodId'];
+        $VenTraId = $filas['VenTraId'];
+        $VenCliId = $filas['VenCliId'];
+        $VenCan = $filas['VenCan'];
+        $VenFech = $filas['VenFech'];
+        $VenTot = $filas['VenTot'];
+        $VenAcId = $filas['VenAcId'];
+        $VenProId = $filas['VenProId'];
     }
 }
-if (isset($_POST['actualizar_producto'])) {
+if (isset($_POST['actualizar_venta'])) {
     $id = $_GET['id'];
-    $TipPro = $_POST['TipPro'];
-    $DesPro = $_POST['DesPro'];
-    $PreCom = $_POST['PreCom'];
-    $PreVen = $_POST['PreVent'];
-    $query = "UPDATE productos set ProTip = '$TipPro', ProDes = '$DesPro', ProPreCo = '$PreCom' , ProPreVe = '$PreVen' WHERE ProId = $id";
+    $CodVen = $_POST['CodVen'];
+    $CodTra = $_POST['CodTra'];
+    $CodCli = $_POST['CodCli'];
+    $CodPro = $_POST['CodPro'];
+    $Can = $_POST['Can'];
+    $Val = $_POST['Val'];
+    $VenFech = $_POST['VenFech'];
+    $VenEs = $_POST['VenEs'];
+    $query = "UPDATE ventas set VenCodId = '$CodVen', VenTraId = '$CodTra', 
+    VenCliId = '$CodCli' , VenCan = '$Can', VenFech = '$VenFech ', VenTot = '$Val'
+    , VenAcId = '$VenEs ', VenProId = '$CodPro' WHERE VenId = $id";
     mysqli_query($conn, $query);
-    header("Location: registro_productos.php");
+    header("Location: ../../../../login/ventas/consultar_venta.php");
 }
 ?>
-<?php include("../../login/includes/head.php") ?>
+<?php
+session_start();
+include('../../login/db.php');
+?>
+<?php
+if (!isset($_SESSION['usuario'])) {
+    header("Location: ../../login/principal.php");
+} ?>
+<?php include('../../login/includes/head.php');
+$nombre = $_SESSION['nombre'];
+echo $nombre;
+?>
+<button><a href="../../login/salir.php">Salir</a></button><br>
 <main style="margin-top:50px;">
-<a href="../../../login/inventario/registro_producto/consultar_productos.php" class="btn btn-primary">Regresar</a>
-    <form action="../registro_producto/editar_productos.php?id=<?php echo $_GET['id']; ?>" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
-        <h1 style="text-align: center;">REGISTRO DE PRODUCTOS</h1>
-        <hr>
-        <table>
-            <tr>
-                <td></td>
-                <td style="width: 200px; text-align: center">
-                    <p><strong>DATOS DEL PRODUCTO</strong></p>
-                </td>
-                <td></td>
-            </tr>
-        </table>
-        <table>
-            <div class="col-md-12 position-relative">
-                <label for="validationTooltip01" class="form-label">TIPO DE PRODUCTO:</label>
-                <input type="number" name="TipPro" class="form-control" id="validationTooltip01" required value="<?php echo $TipPro ?>">
-                <div class="valid-tooltip">
-                    Documento valido...!
-                </div>
-                <div class="invalid-tooltip">
-                    Documento no valido.
-                </div>
-            </div>
-            <div class="col-md-12 position-relative">
-                <label for="validationTooltip01" class="form-label">DESCRIPCION:</label>
-                <input type="text" name="DesPro" class="form-control" id="validationTooltip01" required value="<?php echo $DesPro ?>">
-                <div class="valid-tooltip">
-                    Documento valido...!
-                </div>
-                <div class="invalid-tooltip">
-                    Documento no valido.
-                </div>
-            </div>
-            <div class="col-md-6 position-relative">
-                <label for="validationTooltip01" class="form-label">PRECIO DE COMPRA:</label>
-                <input type="number" name="PreCom" class="form-control" id="validationTooltip01" required value="<?php echo $PreCom ?>">
-                <div class="valid-tooltip">
-                    Documento valido...!
-                </div>
-                <div class="invalid-tooltip">
-                    Documento no valido.
-                </div>
-            </div>
-            <div class="col-md-6 position-relative">
-                <label for="validationTooltip01" class="form-label">PRECIO DE VENTA:</label>
-                <input type="number" name="PreVent" class="form-control" id="validationTooltip01" required value="<?php echo $PreVen ?>">
-                <div class="valid-tooltip">
-                    Documento valido...!
-                </div>
-                <div class="invalid-tooltip">
-                    Documento no valido.
-                </div>
-            </div>
-            <br>
-            <br>
-            <table>
-                <tr>
-                    <td>
-                        <label for="cbox2">Señor usuario asegurese que los datos digitados estan correctos.</label>
-                        <br>
-                    </td>
-                </tr>
-            </table>
-            <table>
-                <br>
-                <table>
-                    <tr>
-                        <div style="margin-right: 12%" class="esp col-3">
-                            <button type="submit" name="actualizar_producto" value="actualizar_producto" class="btn btn-success">Actualizar</button>
-                        </div>
-                        <div style="margin-right: 13%" class="esp col-3">
-                            <button class="btn btn-warning" type="reset">Limpiar datos</button>
-                        </div>
-
-                </table>
-            </table>
-    </form>
-</main>
-<main class="bg-dark text-light p-5 text-center text-sm-start">
-    <form action="../ventas/guardas_venta.php" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
+    <a href="../../login/ventas/consultar_venta.php" class="btn btn-primary">Regresar</a>
+    <form action="../../login/ventas/editar_ventas.php?id=<?php echo $_GET['id']; ?>" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
         <h1 style="text-align: center;">REGISTRO DE VENTAS</h1>
         <table>
             <tr>
@@ -120,7 +64,7 @@ if (isset($_POST['actualizar_producto'])) {
         <table>
             <div class="col-md-6 position-relative">
                 <label for="validationTooltip01" class="form-label">Codigo venta:</label>
-                <input type="number" class="form-control" id="validationTooltip01" name="CodVen" required>
+                <input type="number" class="form-control" id="validationTooltip01" name="CodVen" required value="<?php echo $VenCodId ?>">
                 <div class="valid-tooltip">
                     Documento valido...!
                 </div>
@@ -129,8 +73,19 @@ if (isset($_POST['actualizar_producto'])) {
                 </div>
             </div>
             <div class="col-md-6 position-relative">
+                <label for="inputState" class="form-label" name="VenEs">ESTADO:</label>
+                <select id="inputState" class="form-select" class="form-control" id="validationTooltip01" required name="VenEs" value="<?php echo $VenAcId ?>">
+                    <option selected required>Estado venta</option>
+                    <option value="1" required>1. ACTIVO</option>
+                    <option value="2" required>2. ANULAR</option>
+                    <div id="validationServer04Feedback" class="invalid-feedback" required>
+                        Seleccione el tipo de cargo
+                    </div>
+                </select>
+            </div>
+            <div class="col-md-6 position-relative">
                 <label for="validationTooltip01" class="form-label">Codigo Trabajador:</label>
-                <input type="number" class="form-control" id="validationTooltip01" name="CodTra" required>
+                <input type="number" class="form-control" id="validationTooltip01" name="CodTra" required value="<?php echo $VenTraId ?>">
                 <div class="valid-tooltip">
                     Documento valido...!
                 </div>
@@ -140,7 +95,7 @@ if (isset($_POST['actualizar_producto'])) {
             </div>
             <div class="col-md-6 position-relative">
                 <label for="validationTooltip01" class="form-label">Codigo Clientes:</label>
-                <input type="number" class="form-control" id="validationTooltip01" name="CodCli" required>
+                <input type="number" class="form-control" id="validationTooltip01" name="CodCli" required value="<?php echo $VenCliId ?>"> 
                 <div class="valid-tooltip">
                     Documento valido...!
                 </div>
@@ -150,7 +105,7 @@ if (isset($_POST['actualizar_producto'])) {
             </div>
             <div class="col-md-6 position-relative">
                 <label for="inputState" class="form-label">Codigo del Producto:</label>
-                <input type="number" class="form-control" id="validationTooltip01" name="CodPro" required>
+                <input type="number" class="form-control" id="validationTooltip01" name="CodPro" required value="<?php echo $VenProId ?>">
                 <div class="valid-tooltip">
                     Documento valido...!
                 </div>
@@ -160,7 +115,7 @@ if (isset($_POST['actualizar_producto'])) {
             </div>
             <div class="col-md-6 position-relative">
                 <label for="validationTooltip01" class="form-label">Cantidad:</label>
-                <input type="number" class="form-control" id="validationTooltip01" name="Can" required>
+                <input type="number" class="form-control" id="validationTooltip01" name="Can" required value="<?php echo $VenCan?>">
                 <div class="valid-tooltip">
                     Documento valido...!
                 </div>
@@ -170,7 +125,7 @@ if (isset($_POST['actualizar_producto'])) {
             </div>
             <div class="col-md-6 position-relative">
                 <label for="validationTooltip01" class="form-label">Valor:</label>
-                <input type="number" class="form-control" id="validationTooltip01" name="Val" required>
+                <input type="number" class="form-control" id="validationTooltip01" name="Val" required value="<?php echo $VenTot  ?>">
                 <div class="valid-tooltip">
                     Documento valido...!
                 </div>
@@ -178,7 +133,7 @@ if (isset($_POST['actualizar_producto'])) {
                     Documento no valido.
                 </div>
             </div>
-            <div class="col-md-12 position-relative">
+            <div class="col-md-6 position-relative">
                 <label for="validationCustomUsername" class="form-label">FECHA</label>
                 <?php
                 date_default_timezone_set('America/Bogota');
@@ -211,13 +166,10 @@ if (isset($_POST['actualizar_producto'])) {
             <table>
                 <tr>
                     <div style="margin-right:13%" class="esp col-3">
-                        <button type="submit" name="guardar_salida" value="guardar_salida" class="btn btn-success">Guardar</button>
+                        <button type="submit" name="actualizar_venta" value="actualizar_venta" class="btn btn-success">Guardar</button>
                     </div>
                     <div style="margin-right:12%" class="esp col-3">
                         <button class="btn btn-warning" type="reset">Limpiar datos</button>
-                    </div>
-                    <div class="esp col-3">
-                        <a href="../../login/ventas/consultar_venta.php" class="btn btn-primary">Consultar clientes</a>
                     </div>
                 </tr>
             </table>

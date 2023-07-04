@@ -1,5 +1,16 @@
-<?php include('../../db.php') ?>
-<?php include("../../../login/includes/head.php") ?>
+<?php
+    session_start();
+    include('../../../login/db.php');
+?>
+<?php 
+    if(!isset($_SESSION['usuario'])){
+        header("Location: ../../login/principal.php");
+    } ?>
+<?php  include('../../../login/includes/head.php'); 
+    $nombre = $_SESSION['nombre'];	
+
+    echo $nombre;?>
+<button><a href="../../../login/salir.php">Salir</a></button><br>
 <main class="bg-dark text-light p-5 text-center text-sm-start">
 <a href="../../../login/inventario/ele_crepro.php" class="btn btn-primary">Regresar</a>
     <form action="../registro_tipo_productos/guardar_tipo_producto.php" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">

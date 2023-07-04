@@ -5,8 +5,8 @@
         $CoProd = $_POST['CodProd'];
         $Canti = $_POST['Can'];
         $Tra = $_POST['TraId'];
-        $query ="INSERT INTO compras (ComPvId,ComPrId,ComCan,ComTraId) VALUES 
-        ('$CoProv','$CoProd','$Canti','$Tra')";
+        $query ="INSERT INTO compras (ComPvId,ComPrId,ComCan,ComTraId,ComEs) VALUES 
+        ('$CoProv','$CoProd','$Canti','$Tra',1)";
         mysqli_query($conn, $query);
         header("Location: ../../../../login/compras/consultar_entradas.php");
     }

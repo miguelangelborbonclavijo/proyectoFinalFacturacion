@@ -1,15 +1,19 @@
-<?php include('../../../login/db.php') ?>
 <?php
     session_start();
-    if(!isset($_SESSION['id'])){
-    }
-    $nombre = $_SESSION['nombre'];	
-    include("../../includes/head.php");
-    echo $nombre;
+    include('../../../login/db.php');
 ?>
-<button><a href="../../salir.php">Salir</a></button>
+<?php 
+    if(!isset($_SESSION['usuario'])){
+        header("Location: ../../login/principal.php");
+    } ?>
+<?php  include('../../../login/includes/head.php'); 
+    $nombre = $_SESSION['nombre'];	
+    $tipo_usuario = $_SESSION['tipo_usuario'];
+
+    echo $nombre;?>
+<button><a href="../../../login/salir.php">Salir</a></button><br>   
 <main class="p-5 text-center text-sm-start">
-<a href="../../../registros/registro_soporte/registro_soportes.php" class="btn btn-primary">Regresar</a>
+<a href="../../../login/registros/registro_soporte/registro_soportes.php" class="btn btn-primary">Regresar</a>
     <div class="container-xxl">
         <table class="table">
             <thead>
@@ -25,7 +29,9 @@
                     <th>ESTADO DE SOPORTE</th>
                     <th>FECHA DE SOPORTE</th>
                     <th>DESCRIPCION</th>
+                    <?php if($tipo_usuario == 4){ ?>
                     <th>ESTADOS</th>
+                    <?php } ?>
                 </tr>
             </thead>
             <tbody>
@@ -40,6 +46,7 @@
                         <td><?php echo $filas['SopEstId'] ?></td>
                         <td><?php echo $filas['SopFe'] ?></td>
                         <td><?php echo $filas['SopDesc'] ?></td>
+                        <?php if($tipo_usuario == 4){ ?>
                         <td>
                             <a href="../registro_soporte/editar_soporte.php?id=<?php echo $filas['SopoId'] ?>">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-success bi bi-pen" viewBox="0 0 16 16">
@@ -53,6 +60,7 @@
                                 </svg>
                             </a>
                         </td>
+                        <?php } ?>
                     </tr>
                 <?php } ?>
             </tbody>

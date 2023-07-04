@@ -1,5 +1,17 @@
-<?php include("../../db.php") ?>
-<?php include("../../includes/head.php") ?>
+<?php
+    session_start();
+    include('../../../login/db.php');
+?>
+<?php 
+    if(!isset($_SESSION['usuario'])){
+        header("Location: ../../login/principal.php");
+    } ?>
+<?php  include('../../../login/includes/head.php'); 
+    $nombre = $_SESSION['nombre'];	
+    $tipo_usuario = $_SESSION['tipo_usuario'];
+
+    echo $nombre;?>
+<button><a href="../../../login/salir.php">Salir</a></button><br>
 <main style="margin-top:30px;">
 <a href="../../../login/inventario/reporte_productos/resporta_productos.php" class="btn btn-primary">Regresar</a>
   <div class="container-lg">
@@ -14,7 +26,7 @@
           <th scope="col">CODIGO DE PRODUCTO</th>
           <th scope="col">DESCRIPCION</th>
           <th scope="col">FECHA DE CREACION</th>
-          <th scope="col">ESTADOS</th>
+          <?php if($tipo_usuario == 4) { ?><th scope="col">ESTADOS</th> <?php }?>
         </tr>
       </thead>
       <tbody>
@@ -27,6 +39,7 @@
             <td><?php echo $filas['ReProId'] ?></td>
             <td><?php echo $filas['DesRePr'] ?></td>
             <td><?php echo $filas['RepFech'] ?></td>
+            <?php if($tipo_usuario == 4){ ?>
             <td>
               <a href="../../inventario/reporte_productos/editar_reporte_productos.php ?id=<?php echo $filas['ReId'] ?>">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-success bi bi-pen" viewBox="0 0 16 16">
@@ -40,6 +53,7 @@
                 </svg>
               </a>
             </td>
+            <?php } ?>
           </tr>
         <?php } ?>
       </tbody>

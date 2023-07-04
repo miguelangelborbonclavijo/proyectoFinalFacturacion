@@ -1,4 +1,17 @@
 <?php
+    session_start();
+    include('../../../login/db.php');
+?>
+<?php 
+    if(!isset($_SESSION['usuario'])){
+        header("Location: ../../login/principal.php");
+    } ?>
+<?php  include('../../../login/includes/head.php'); 
+    $nombre = $_SESSION['nombre'];	
+
+    echo $nombre;?>
+<button><a href="../../../login/salir.php">Salir</a></button><br>
+<?php
 include("../../db.php");
 if (isset($_GET['id'])) {
 	$id = $_GET['id'];
@@ -17,12 +30,10 @@ if (isset($_POST['actualizar_tipProducto'])) {
 	header("Location: ../registro_tipo_productos/registro_tipo_producto.php");
 }
 ?>
-<?php include("../../includes/head.php") ?>
 <main style="margin-top:50px;">
 <a href="../../../login/inventario/registro_tipo_productos/consultar_tipo_producto.php" class="btn btn-primary">Regresar</a>
 	<form action="../registro_tipo_productos/editar_tipo_producto.php?id=<?php echo $_GET['id']; ?>" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">
 		<table>
-			<br>
 			<h1 style="text-align: center;">REGISTRO DE TIPOS DE PRODUCTOS</h1>
 			<hr>
 			<table>

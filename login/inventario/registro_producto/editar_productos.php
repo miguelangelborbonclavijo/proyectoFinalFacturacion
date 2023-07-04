@@ -1,4 +1,17 @@
 <?php
+    session_start();
+    include('../../../login/db.php');
+?>
+<?php 
+    if(!isset($_SESSION['usuario'])){
+        header("Location: ../../login/principal.php");
+    } ?>
+<?php  include('../../../login/includes/head.php'); 
+    $nombre = $_SESSION['nombre'];	
+
+    echo $nombre;?>
+<button><a href="../../../login/salir.php">Salir</a></button><br>
+<?php
 include("../../db.php");
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -23,7 +36,6 @@ if (isset($_POST['actualizar_producto'])) {
     header("Location: registro_productos.php");
 }
 ?>
-<?php include("../../includes/head.php") ?>
 <main style="margin-top:50px;">
 <a href="../../../login/inventario/registro_producto/consultar_productos.php" class="btn btn-primary">Regresar</a>
     <form action="../registro_producto/editar_productos.php?id=<?php echo $_GET['id']; ?>" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-1">

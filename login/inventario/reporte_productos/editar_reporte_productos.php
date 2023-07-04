@@ -1,5 +1,16 @@
-<?php include('../../db.php') ?>
-<?php include("../../includes/head.php") ?>
+<?php
+    session_start();
+    include('../../../login/db.php');
+?>
+<?php 
+    if(!isset($_SESSION['usuario'])){
+        header("Location: ../../login/principal.php");
+    } ?>
+<?php  include('../../../login/includes/head.php'); 
+    $nombre = $_SESSION['nombre'];	
+
+    echo $nombre;?>
+<button><a href="../../../login/salir.php">Salir</a></button><br>
 <?php
 include("../../db.php");
 if (isset($_GET['id'])) {
