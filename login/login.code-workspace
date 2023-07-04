@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"name": "login",
+			"path": "."
+		},
+		{
+			"name": "inventario",
+			"path": "../proyectoFinalFacturacion/vistas/inventario"
+		},
+		{
+			"name": "registros",
+			"path": "../proyectoFinalFacturacion/vistas/registros"
+		},
+		{
+			"name": "ventas",
+			"path": "../proyectoFinalFacturacion/vistas/ventas"
+		},
+		{
+			"name": "errores",
+			"path": "../proyectoFinalFacturacion/vistas/errores"
+		},
+		{
+			"name": "compras",
+			"path": "../proyectoFinalFacturacion/vistas/compras"
+		}
+	],
+	"settings": {}
+}

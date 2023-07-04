@@ -12,7 +12,7 @@
         $SalariTra = $_POST['SalariTr'];
         $CorrTra = $_POST['CorrTra'];
         $ConTra = $_POST['ConTra'];
-        $query="INSERT INTO personas (PerTidId,PerCliId,PerNom1,PerNom2,PerApe1,PerApe2) VALUES ('$TipDocTra','$NumDocTra','$PriNomTra','$SegNomTra','$PriApeTra','$SegApeTra')"; 
+        $query="INSERT INTO personas (PerTidId,PerId,PerNom1,PerNom2,PerApe1,PerApe2) VALUES ('$TipDocTra','$NumDocTra','$PriNomTra','$SegNomTra','$PriApeTra','$SegApeTra')"; 
         $sql ="INSERT INTO trabajador (TraPerId,TraCarId,TraHor,TraSalar,TrCorr,TrCon) VALUES ('$NumDocTra','$TipCarTra','$HorLabTra','$SalariTra','$CorrTra','$ConTra')";
          mysqli_query($conn, $query);
          mysqli_query($conn, $sql);

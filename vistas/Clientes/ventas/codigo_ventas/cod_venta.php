@@ -1,7 +1,7 @@
 <?php include('../../../registros/db.php') ?>
 <?php include("../../../includes/headcli.php") ?>
 <main class="bg-dark text-light p-5 text-center text-sm-start">
-
+<a href="../../ele_venta.php" class="btn btn-primary">Regresar</a>
     <form action="../../../Clientes/ventas/codigo_ventas/guardar_cod.php" method="POST" style="width: 60%; margin-left: 20%" class="forCont row g-2">
         <h1 style="text-align: center;">REGISTRO DE CODIGO DE VENTAS</h1>
         <table>
@@ -104,4 +104,4 @@
     </div>
 </main>
 
-<?php include("../../includes/footer.php") ?>
+<?php include("../../../includes/footer.php") ?>

@@ -34,7 +34,7 @@
                     <p style="height:50%;" class="card-text">
                         En este apartado podras registrar todas las vantas de los productos o servicios que se hicieron en la empresa.
                     </p>
-                    <a href="../login/tipo_usuario.php" class="btn btn-primary">Ingresar</a>
+                    <a href="../login/loginadm.php" class="btn btn-primary">Ingresar</a>
                 </div>
             </div>
         </div>
